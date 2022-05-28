@@ -1,0 +1,305 @@
+body {
+    display: flex;
+    margin-left: auto;
+    background: url(../images/sport_login.png) center no-repeat;
+    background-size: 94%;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: rgba(34, 34, 34, 0.508);
+    color: #fff;
+    font-size: 8px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    border-radius: 20px;
+    display: flex;
+    justify-content: left;
+    flex-grow: 0;
+    margin: auto;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.08);
+    font-family: 'Macondo', cursive;
+    color: #fff;
+    background: rgba(0, 39, 148, 0.412);
+    margin-right: 60%;
+    padding-left: 24px;
+}
+
+.names {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.names div {
+    margin: 0 10px;
+}
+
+input {
+    margin-bottom: 4px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 4px;
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+    background-color: rgba(0, 120, 160, 0.456);
+    border-radius: 8px;
+}
+
+
+input:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px;
+    background-color: rgba(0, 120, 160, 0.836);
+}
+
+input[type="file" i] {
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 4px;
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+    background-color: rgba(0, 120, 160, 0.456);
+    border-radius: 8px;
+}
+
+input#upload_original {
+    box-shadow: 0px 0px 0 #666;
+    background-color: rgba(0, 120, 160, 0.836);
+}
+
+div.name {
+    margin: 0px;
+}
+
+input[type=submit] {
+    background: #2e1061;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+
+input[type=submit]:hover {
+    background: #fa1c2c;
+}
+
+input[type=submit]:disabled,
+input[type=submit]:disabled:hover,
+input[type=submit]:disabled:active {
+    background: #7e838d;
+}
+
+
+
+.section_main {
+    color: white;
+    padding-bottom: 20px;
+    margin-right: 10px;
+}
+
+.section_main h1 {
+    color: white;
+    margin: 10px 0px;
+
+}
+
+
+.section_main div {
+    margin-bottom: 2px
+}
+
+.error label {
+    color: red;
+}
+
+.error span {
+    opacity: 1;
+    font-size: 11px;
+    color: red;
+
+}
+
+.error input,
+.error #upload {
+    border-color: red;
+}
+
+
+
+
+.allow input {
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    border: 2px solid #d9d9d9;
+    margin-bottom: 3px;
+}
+
+
+form span {
+    opacity: 0;
+    font-size: 10px;
+    transition: opacity 0.3s ease;
+}
+
+label {
+    font-size: 14px;
+}
+
+
+.allow {
+    margin: 0 10px 25px;
+}
+
+.allow div {
+    display: inline-block;
+}
+
+
+
+/* codice per versione-mobile */
+@media(max-width:700px) {
+
+    main {
+        color: white;
+        margin-left: 180px;
+        padding-bottom: 4px;
+    }
+
+    main span {
+        font-size: 8px;
+    }
+
+    .section_main {
+        font-size: 16px;
+        margin-right: 18px;
+        padding-bottom: 4px;
+    }
+
+    main input {
+        padding: 4px;
+        width: 130px;
+        font-size: 12px;
+    }
+
+    .allow input {
+        width: 12px;
+        height: 12px; 
+    }
+
+    main h1 {
+        font-size: 14px;
+    }
+
+    main div {
+        font-size: 12px;
+    }
+
+    .section_main h1 {
+        margin: 4px;
+        font-size: 12px;
+    }
+
+    input#submit {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    input#upload_original {
+        font-size: 12px;
+    }
+
+    main label {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:500px) {
+
+    main {
+        color: white;
+        margin-left: 200px;
+        padding-bottom: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    main span {
+        font-size: 8px;
+    }
+
+    .section_main {
+        font-size: 10px;
+        margin-right: 10px;
+        padding-bottom: 4px;
+    }
+
+    main label {
+        font-size: 10px;
+    }
+
+    main div {
+        font-size: 10px;
+    }
+
+    main input {
+        margin-top: 2px;
+        padding: 4px;
+        width: 110px;
+        font-size: 10px;
+    }
+
+    .allow input {
+        width: 10px;
+        height: 10px; 
+    }
+
+    .section_main h1 {
+        margin: 2px;
+        font-size: 11px;
+    }
+
+    div.allow {
+        margin: 0px;
+    }
+
+    main label {
+        font-size: 10px;
+    }
+
+    input[type=submit] {
+ 
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    input#submit {
+        font-size: 10px;
+        padding: 2px;
+    }
+
+    input#upload_original {
+        font-size: 10px;
+    }
+}

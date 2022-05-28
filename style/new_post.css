@@ -1,0 +1,633 @@
+body {
+    background-color: rgba(0, 120, 160, 0.105);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+footer {
+    margin-top: 40px;
+    color: black;
+    font-size: 12px;
+}
+
+.box_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+#sidebar_button div {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.176);
+    z-index: 77;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    opacity: 1;
+    transition: opacity ease 0.2s;
+}
+
+#sidebar_button {
+    display: none;
+}
+
+#sidebar_links {
+    width: 40%;
+}
+
+#sidebar_links {
+    position: relative;
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+    background-color: rgba(68, 205, 251, 0.732);
+    height: 100%;
+    transition: all 0.9s ease;
+    overflow: hidden;
+    text-align: center;
+    overflow-y: scroll;
+    left: 0;
+}
+
+#sidebar a.here {
+    background-color: rgba(4, 104, 138, 0.732);
+    font-weight: 700;
+}
+
+#sidebar a {
+    color: black;
+    display: block;
+    padding: 12px 0;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    border: 1px solid black;
+}
+
+#sidebar a:hover {
+    background-color: rgba(0, 62, 83, 0.732);
+}
+
+div.content {
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.200);
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+div.content img {
+    border-radius: 8px;
+}
+
+div#contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+div.content h1 {
+    font-family: 'Grechen Fuemen', cursive;
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 100;
+    font-style: italic;
+    color: #635252;
+    border-radius: 8px;
+}
+
+div.content h2 {
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 16px;
+    font-weight: 200;
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+}
+
+h1.error {
+    font-size: 20px;
+    font-family: 'IM Fell DW Pica SC', serif;
+}
+
+div.content:hover {
+    width: 25%;
+}
+
+#sidebar.hidden {
+    display: none;
+}
+
+.box_container img {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+#modale.hidden {
+    display: none;
+}
+
+#modale {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(172, 40, 0, 0.224);
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#modale img {
+    padding: 3px;
+    height: 50%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+button.btncond {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+div.container_modal {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 3px;
+    background-color: rgba(248, 236, 218, 0.575);
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    box-shadow: 5px 5px 0 #666;
+    box-shadow: 5px 5px 0 rgb(0, 0, 0);
+}
+
+div.container_modal button {
+    color: black;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding: 1px;
+    background: rgba(221, 52, 0, 0.864);
+}
+
+div.container_modal button:hover {
+    background: yellow;
+}
+
+div.container_modal input {
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    padding: 3px;
+    background: rgba(221, 52, 0, 0.864);
+}
+
+div.container_modal input:hover {
+    background: yellow;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1000px;
+    padding-top: 77px;
+    width: 100%;
+}
+
+header {
+    color: rgb(213, 50, 0);
+    background-image: url(../images/sport.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-family: 'Dancing Script', cursive;
+}
+
+header nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 0.8em;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(221, 52, 0, 0.604);
+    height: 20px;
+    margin: 0;
+    font-style: normal;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.137);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+}
+
+header h1 {
+    text-align: center;
+    font-style: normal;
+}
+
+header h1 em {
+    font-size: 1.40em;
+    line-height: 2px;
+    font-style: normal;
+}
+
+header h1 strong {
+    font-size: 2em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.links {
+    font-style: normal;
+    line-height: 4px;
+    font-weight: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#titolo {
+    font-size: 2em;
+}
+
+a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 25px;
+    box-shadow: 5px 5px 0 #666;
+    margin: 10px;
+    background: #d30;
+    border-radius: 8px;
+}
+
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px;
+    background: rgba(255, 102, 0, 0.227);
+}
+
+#menuascomparsa {
+    display: none;
+}
+
+#menuascomparsa div {
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 4px;
+}
+
+#new_post a {
+    color: red;
+    border: 2px solid black;
+}
+
+#tipo {
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0 #666;
+    margin: 10px;
+    background: #d30;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+#tipo:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px;
+    background: #f60;
+}
+
+.submit {
+    font-family: 'Dancing Script', cursive;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0 #666;
+    margin: 10px;
+    background: rgb(41, 135, 0);
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.submit:hover {
+    box-shadow: 0px 0px 0 #666;
+    top: 5px;
+    left: 5px;
+    background: rgb(66, 221, 0);
+}
+
+​ h1 {
+    color: #ffc04d;
+}
+
+#content {
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0 #666;
+    margin: 10px;
+    background: #ffc04d;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+input.titolo {
+    height: 40px;
+}
+
+#search {
+    color: red;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    text-decoration: none;
+    position: relative;
+    padding: 15px 30px;
+    box-shadow: 5px 5px 0 #666;
+    margin: 10px;
+    background: rgba(221, 52, 0, 0.817);
+    display: inline-block;
+    border-radius: 8px;
+}
+
+iframe.track {
+    height: 78px;
+}
+
+
+@media(max-width:500px) {
+    .links {
+        display: none;
+    }
+
+    #sidebar_button {
+        display: block;
+    }
+
+    header {
+        height: 400px;
+
+    }
+
+    header h1 strong {
+        font-size: 1em;
+    }
+
+    header h1 em {
+        font-size: 0.80em;
+    }
+
+    #search {
+        width: 60%;
+        font-size: 10px;
+        margin-left: auto;
+        padding: 10px 20px;
+        box-shadow: 5px 5px 0 #666;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    #tipo {
+        font-family: 'Dancing Script', cursive;
+        font-size: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px 0 #666;
+        margin: 6px;
+    }
+
+    .submit {
+        font-size: 10px;
+        padding: 10px;
+        box-shadow: 5px 5px 0 #666;
+        margin: 6px;
+    }
+
+    input#content {
+        margin: 6px;
+        font-size: 10px;
+        padding: 8px;
+    }
+
+    form#search {
+        width: 100%;
+        padding: 6px;
+    }
+
+    form#search h1 {
+        margin: 2px;
+    }
+
+    div.content h1 {
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    div.content {
+        padding: 2px;
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    div.content h1 {
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    div.content h2 {
+        margin: 4px;
+        font-size: 10px;
+    }
+
+    #modale {
+        height: 100%;
+        width: 100%;
+    }
+
+    div.container_modal {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        padding: 4px;
+        background-color: rgba(248, 236, 218, 0.575);
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
+
+
+
+@media(max-width:700px) {
+
+    #sidebar_button {
+        display: block;
+    }
+
+    .links {
+        display: none;
+    }
+
+    #modale {
+        height: 100%;
+        width: 100%;
+    }
+
+    #sidebar_button {
+        display: block;
+    }
+
+    header {
+        height: 400px;
+    }
+
+    header h1 strong {
+        font-size: 1em;
+    }
+
+    header h1 em {
+        font-size: 0.80em;
+    }
+
+    #search {
+        width: 80%;
+        font-size: 16px;
+        margin-left: auto;
+        padding: 14px 20px;
+        box-shadow: 5px 5px 0 #666;
+        display: inline-block;
+        border-radius: 8px;
+    }
+
+    #tipo {
+        font-size: 16px;
+        padding: 14px;
+        box-shadow: 5px 5px 0 #666;
+        margin: 6px;
+    }
+
+    .submit {
+        font-size: 16px;
+        padding: 14px;
+        box-shadow: 5px 5px 0 #666;
+        margin: 6px;
+    }
+
+    input#content {
+        margin: 6px;
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    form#search {
+        width: 100%;
+        padding: 10px;
+    }
+
+    form#search h1 {
+        margin: 2px;
+    }
+
+
+    div.content h1 {
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    div.content {
+        padding: 2px;
+        font-size: 10px;
+        margin: 2px;
+    }
+
+    div.content h1 {
+        font-size: 12px;
+        margin: 6px;
+    }
+
+    div.content h2 {
+        margin: 6px;
+        font-size: 12px;
+    }
+
+    div.container_modal {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+}
